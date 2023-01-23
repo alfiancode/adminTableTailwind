@@ -86,7 +86,7 @@ const PermitCard = ({ permit }: Props) => {
                   <div key={index}>
                     <div>
                       <div
-                        className={`text-[10px] leading-3  ${stylePermitCard.commentColor}`}
+                        className={`font-ibmmono tracking-wide text-[10px] leading-3  ${stylePermitCard.commentColor}`}
                       >
                         {parse(makeBold(comment.commentText))}
                       </div>
