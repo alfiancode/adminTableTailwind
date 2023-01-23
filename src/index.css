@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "NostromoRegular";   /*Can be any text*/
+    src: local("NostromoRegular"),
+      url("./fonts/NostromoRegular-Medium.otf") format("truetype");
+  }
