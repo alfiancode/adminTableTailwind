@@ -1,5 +1,5 @@
 function makeBold(text: string) {
-  return text.replace(/\*(.*?)\*/g, "<div>$1</div>");
+  return text.replace(/\*(.*?)\*/g, "<b >$1</b>");
 }
 
 export default makeBold;
