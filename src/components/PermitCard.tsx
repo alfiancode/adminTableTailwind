@@ -70,7 +70,7 @@ const PermitCard = ({ permit }: Props) => {
                 </div>
               </div>
             ) : null}
-            <div className="mt-[26px] ml-[px] z-50">
+            <div className="mt-[26px] ml-[px] z-50 overflow-y-scroll">
               <div
                 className={`${stylePermitCard.titleColor} text-xs leading-4`}
               >
@@ -86,7 +86,7 @@ const PermitCard = ({ permit }: Props) => {
                   <div key={index}>
                     <div>
                       <div
-                        className={`font-ibmmono tracking-wide text-[10px] leading-3  ${stylePermitCard.commentColor}`}
+                        className={` font-ibmmono tracking-wide text-[10px] leading-3  ${stylePermitCard.commentColor}`}
                       >
                         {parse(makeBold(comment.commentText))}
                       </div>
