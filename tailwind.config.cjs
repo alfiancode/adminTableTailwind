@@ -9,7 +9,7 @@ module.exports = {
       fontFamily:{
         "ibmmono" : ['IBM Plex Mono', "monospace"],
         "ibmsans" : ['IBM Plex Sans', "sans-serif"],
-        'nostromo' : ['Nostromo', "monospace"],
+        'nostromo' : ['NostromoRegular', "monospace"],
 
       }
     },
