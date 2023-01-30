@@ -70,7 +70,7 @@ const PermitCard = ({ permit }: Props) => {
                 </div>
               </div>
             ) : null}
-            <div className="mt-[26px] ml-[px] z-50 overflow-y-scroll">
+            <div className="mt-[26px] ml-[px] z-50 overflow-y-scroll overflow-x-clip">
               <div
                 className={`${stylePermitCard.titleColor} text-xs leading-4`}
               >
