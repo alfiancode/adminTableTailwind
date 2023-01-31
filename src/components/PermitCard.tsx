@@ -3,8 +3,10 @@ import dateFormater from "../utils/dateFormater";
 import makeBold from "../utils/makeBold";
 import removeAsterisks from "../utils/removeAsterik";
 import parse from "html-react-parser";
+import dateBold from "../utils/dateBold";
+import projectData from "../data/project_data.json";
 interface Props {
-  permit: any;
+  permit: typeof projectData["results"][0]["permits"][0];
 }
 const PermitCard = ({ permit }: Props) => {
   const { status, comments } = permit;
@@ -22,7 +24,7 @@ const PermitCard = ({ permit }: Props) => {
     titleColor: "",
   };
   const layoutPermitCard =
-    "w-[173px] h-[204px] px-[13px] flex flex-col rounded-md";
+    "w-[173px] h-[204px] px-[13px] flex flex-col rounded-md ";
   if (status === "D") {
     stylePermitCard = {
       bgColor: "#7949FF",
@@ -72,7 +74,7 @@ const PermitCard = ({ permit }: Props) => {
             ) : null}
             <div className="mt-[26px] ml-[px] z-50 overflow-y-auto overflow-x-clip">
               <div
-                className={`${stylePermitCard.titleColor} text-xs leading-4`}
+                className={`${stylePermitCard.titleColor} text-xs leading-4 font-ibmsans`}
               >
                 {comments[0].user.firstName.toUpperCase()}{" "}
                 {comments[0].user.lastName.toUpperCase()} :
@@ -88,10 +90,10 @@ const PermitCard = ({ permit }: Props) => {
                       <div
                         className={` font-ibmmono tracking-wide text-[10px] leading-3  ${stylePermitCard.commentColor}`}
                       >
-                        {parse(makeBold(comment.commentText))}
+                        {parse(makeBold(dateBold(comment.commentText)))}
                       </div>
                       <div
-                        className={`${stylePermitCard.colorBase} text-[9px] leading-3  tracking-widest my-2 `}
+                        className={`${stylePermitCard.colorBase} text-[9px] leading-3  tracking-widest my-2  font-ibmmono`}
                       >
                         {dateFormater(comment.timeStamp)}
                       </div>

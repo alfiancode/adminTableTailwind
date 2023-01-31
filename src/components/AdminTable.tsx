@@ -2,7 +2,7 @@ import React from "react";
 import companyData from "../data/company_data.json";
 import Header from "./Header";
 import ProjectRow from "./ProjectRow";
-const AdminTable = () => {
+const AdminTable: React.FC = () => {
   const { adminCategories } = companyData;
 
   return (

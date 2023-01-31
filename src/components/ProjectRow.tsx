@@ -2,8 +2,10 @@ import React from "react";
 import projectData from "../data/project_data.json";
 import companyData from "../data/company_data.json";
 import PermitCard from "./PermitCard";
-
-const ProjectRow = () => {
+interface Props {
+  project: typeof projectData["results"][0];
+}
+const ProjectRow: React.FC<Props> = () => {
   const { adminCategories } = companyData;
   const { results } = projectData;
   return (
